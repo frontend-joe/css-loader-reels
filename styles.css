@@ -11,12 +11,11 @@ body {
 .frame {
   position: relative;
   width: 100%;
-  height: 500px;
-  translate: 0 60px;
+  translate: 0 92px;
   margin: auto;
   display: grid;
   place-items: center;
-  scale: 1.1;
+  scale: 1.2;
 }
 
 .frame :is(h2, h1, h3) {
@@ -39,15 +38,19 @@ body {
 
 .frame h3 {
   position: absolute;
-  bottom: 136px;
+  bottom: -12px;
   font-size: 12px;
 }
 
 .grid {
   display: grid;
-  gap: 0 010px;
+  gap: 0 10px;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.grid.two-col {
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .grid > div {
@@ -57,6 +60,10 @@ body {
   width: 70px;
   height: 120px;
   margin-bottom: 20px;
+}
+
+.grid.grid.two-col > div {
+  width: 110px;
 }
 
 .grid > div > p {
